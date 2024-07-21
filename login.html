@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login-form">
+        <h1>Admin login</h1>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Admin" id="UserName" >
+          <i class="mdi mdi-account"></i>
+        </div>
+        <div class="form-group log-status">
+          <input type="password" class="form-control" placeholder="Password" id="Password" >
+          <i class="mdi mdi-lock"></i>
+        </div>
+         <span class="alert">Invalid Credentials</span>
+         
+        <button type="button" class="log-btn" onclick="checkCredentials()"><i class="mdi mdi-account"></i> Log in</button>
+        
+       
+      </div>
+   
+    <script>
+        function checkCredentials() {
+            var username = document.getElementById("UserName").value;
+            var password = document.getElementById("Password").value;
+            
+            // Check if username and password match the predefined credentials
+            if (username === "admin" && password === "12345") {
+                // Redirect to the next page
+                window.location.href = "cards.html";
+            } else {
+                // Show error message for invalid credentials
+                document.querySelector('.alert').style.display = "block";s
+            }
+        }
+    </script>
+</body>
+</html>
