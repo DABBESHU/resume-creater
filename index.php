@@ -1,9 +1,9 @@
 <?php
 session_start();
 $servername = "localhost";
-$username = "id21704108_data";
-$db_password = "Kamisama&07";
-$database_name = "id21704108_database";
+$username = "";
+$db_password = "";
+$database_name = "";
 $conn = new mysqli($servername, $username, $db_password, $database_name);
 
 if ($conn->connect_error) {
